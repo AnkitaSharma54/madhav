@@ -1,0 +1,1242 @@
+
+
+
+    /* Prevent content from hiding under fixed navbar */
+    body {
+		      font-family: 'Roboto', sans-serif;
+      padding-top: 70px; /* adjust to navbar height */
+      margin: 0;
+      overflow-x: hidden; /* avoid horizontal scroll */
+    }
+	
+	/* Navbar styles */
+.navbar-area {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:rgb(90, 166, 72) ;
+  font-weight: 700;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.highlight-link.active {
+  color:rgb(255, 78, 10) !important;
+}
+
+
+.btn-primary {
+  background-color: rgb(255, 78, 10) !important;
+  border: none;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(255, 78, 10) !important;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo-one {
+  max-height: 100%;
+  width: 100%;
+}
+
+/* Carousel Section */
+.banner-section {
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+}
+
+/* Carousel Images */
+.carousel-inner > .carousel-item > img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+}
+
+
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* Control buttons width */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+.carousel-item img {
+  width: 100vw;       /* full viewport width */
+  height: 600px;      /* fixed height for consistency */
+  object-fit: cover;  /* cover whole area, crop if needed */
+}
+
+    /* Make carousel fill the banner */
+    #myCarousel {
+      height: 100%;
+    }
+/* Make carousel indicators circular */
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;          /* circle */
+  background-color: rgba(0, 123, 255, 0.5); /* semi-transparent blue */
+  border: none;                /* remove border */
+  margin: 0 6px;               /* space between buttons */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background-color: #007bff;  /* solid blue for active */
+  opacity: 1;
+}
+
+.carousel-indicators button:hover {
+  background-color: #0056b3;  /* darker blue on hover */
+  opacity: 1;
+}
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+/* === Media Query: Mobile Devices (max-width: 576px) === */
+@media (max-width: 576px) {
+  /* Adjust body padding to avoid overlap with navbar */
+  body {
+    padding-top: 60px;
+  }
+
+  /* Navbar area adjustments */
+  .navbar-area {
+    padding: 6px 0;
+  }
+
+  /* Logo size reduced */
+  .logo-one {
+    max-height: 40px;
+  }
+
+  /* Toggler button: circular and smaller */
+  .navbar-toggler {
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  /* Navigation links */
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* "Enquiry Now" button on mobile */
+  .navbar-nav .btn {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Collapse menu full width */
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+/* === Media Query: Show Full Carousel Image on Mobile Screens === */
+@media (max-width: 576px) {
+  .banner-section {
+    height: auto;
+  }
+
+  .carousel-inner {
+    height: auto;
+  }
+
+  .carousel-item {
+    height: auto;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;              /* Maintain image aspect ratio */
+    max-height: 100vh;         /* Don't exceed the screen */
+    object-fit: contain;       /* Show full image without cropping */
+    display: block;
+    margin: 0 auto;
+  }
+
+  #myCarousel {
+    height: auto;
+  }
+
+  /* Optional: Reduce controls size on small devices */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 8%;
+  }
+}
+/* About Section Wrapper */
+.about-area {
+  padding-top: 25px;
+  padding-bottom: 70px;
+  background-color: #f9f9f9; /* light gray for contrast */
+}
+
+/* Image styling */
+.about-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Content wrapper */
+.about-content {
+  padding: 20px 30px;
+}
+
+/* Section title heading */
+.about-content .section-title h3 {
+  font-size: 28px;
+color:rgb(90, 166, 72);
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: "noto-serif", serif;
+}
+
+/* Paragraph text */
+.about-content .section-title p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555555d4;
+    font-family: "noto serif", serif;
+    margin-bottom: 15px;
+}
+
+/* Bold text in paragraph */
+.about-content .section-title p b {
+    font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px 15px;
+  }
+
+  .about-content .section-title h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .about-content .section-title p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .about-img {
+    margin-bottom: 30px;
+  }
+}
+
+/* === CHOOSE AREA STYLES === */
+.choose-area {
+  padding-top: 20px;
+  padding-bottom: 70px;
+  background-color: #f4f8fb; /* light background */
+  font-family: "noto-serif", serif;
+}
+
+.section-title h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: rgb(90, 166, 72);
+  margin-bottom: 40px;
+}
+
+/* === Animations === */
+
+/* Fade in and slide up */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon bounce */
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* === Apply animations === */
+
+.choose-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 42px 25px;
+    box-shadow: 22 25px 46px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    opacity: 0;
+    animation: fadeSlideUp 0.8s forwards;
+    animation-delay: 0.3s;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.choose-card i {
+  font-size: 24px;
+  color: rgb(255, 78, 10);
+  background-color: white; /* Icon background color */
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: iconBounce 2.5s infinite;
+
+  /* Shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.choose-card h3 {
+  font-size: 30px;
+  color: rgb(90, 166, 72);
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-family: "noto-serif", serif;
+}
+
+.choose-card p {
+    font-size: 19px;
+    color: #555555d4;
+    line-height: 1.7;
+    font-family: "noto-serif", serif;
+}
+
+/* Optional background class */
+.forest-bg {
+  background-image: url('image/your-background.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .choose-card {
+    padding: 20px;
+    text-align: center;
+
+    /* Adjust animation delay for multiple cards (optional) */
+    animation-delay: 0.1s;
+  }
+
+  .choose-card i {
+    font-size: 28px;
+  }
+
+  .choose-card h3 {
+    font-size: 20px;
+  }
+
+  .choose-card p {
+    font-size: 15px;
+  }
+}
+/* Base Section Styling */
+.room-area {
+    padding-top: 20px;
+    padding-bottom: 70px;
+    background-color: #def7d7;
+}
+
+/* Section Title */
+.section-title {
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #5aa648;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease forwards;
+    font-weight: 600;
+    font-family: noto,serif;
+}
+.section-title .sp-color {
+    font-size: 18px;
+    color: #ff4e0a !important;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Room Card */
+.room-card {
+   overflow: hidden;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+   background: #fff;
+   margin-bottom: 30px;
+}
+
+.room-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.room-card img {
+   width: 100%;
+   height: auto;
+   transition: transform 1s ease;
+   display: block;
+   border-radius: 8px 8px 0 0;
+}
+
+/* Zoom-in on hover */
+.room-card:hover img {
+   transform: scale(1.1);
+}
+
+/* Card Content */
+.room-card .content {
+  padding: 20px;
+}
+
+.room-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.room-card h3 a {
+    text-decoration: none;
+    color: #5aa648;
+    transition: color 0.3s;
+    font-weight: 700;
+    font-size: 25px;
+    font-family: noto;
+}
+
+
+
+.room-card b {
+    display: block;
+    color: #000000ba;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+.room-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Book Now Button */
+.room-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.room-card button {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.room-card button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .room-card h3 {
+    font-size: 18px;
+  }
+
+  .room-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Section Styling */
+/* Section Styling */
+.gallery-area {
+  padding: 100px 0 70px;
+  background-color: #f9f9f9;
+}
+
+
+.section-title .sp-color {
+  font-size: 18px;
+  color: #27ae60;
+  font-weight: 500;
+  display: block;
+}
+
+/* Gallery Grid */
+.gallery-tab-item .row {
+  margin-top: 40px;
+}
+
+.single-gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.single-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 8px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Image zoom effect */
+.single-gallery:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay icon container */
+.gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 14px 16px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  color: #fff;
+  z-index: 2;
+}
+
+/* On hover, make icon circle appear and zoom in */
+.single-gallery:hover .gallery-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Plus icon styling with animation */
+.gallery-icon i {
+  font-size: 24px;
+  color: #ffffff;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.8) rotate(-45deg);
+  opacity: 0;
+}
+
+/* Animate icon on hover */
+.single-gallery:hover .gallery-icon i {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .gallery-icon {
+    padding: 10px 12px;
+    font-size: 18px;
+  }
+}
+
+/* Section Container */
+.book-area-two {
+  padding: 20px 0 70px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Flex row alignment */
+.book-area-two .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Left Content */
+.book-content-two {
+  animation: slideInLeft 1s ease forwards;
+  opacity: 0;
+  padding-right: 30px;
+}
+
+/* Section Title */
+.book-content-two .section-title {
+  margin-bottom: 25px;
+}
+
+.book-content-two .sp-color {
+  font-size: 20px;
+  font-weight: 600;
+  color: #27ae60;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.book-content-two h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color:#5aa648;;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Empty paragraph kept for structure */
+.book-content-two p {
+  opacity: 0;
+  animation: fadeInUp 1.6s ease forwards;
+  animation-delay: 0.5s;
+  height: 0; /* since empty */
+}
+
+/* Book Now Button */
+.book-content-two button {
+  background-color: #27ae60;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1.8s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.book-content-two button:hover {
+  background-color: #1e8449;
+  box-shadow: 0 12px 20px rgba(30, 132, 73, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Right Image */
+.book-img-2 {
+  max-width: 100%;
+  animation: slideInRight 1s ease forwards;
+  opacity: 0;
+}
+
+.book-img-2 img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .book-content-two {
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .book-content-two h2 {
+    font-size: 28px;
+  }
+  
+  .book-content-two button {
+    width: 100%;
+    padding: 14px 0;
+  }
+  
+  .book-img-2 {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+}
+
+/* --- Testimonials Carousel Styling --- */
+
+.testimonials-area {
+  background-color: #f0f7f1; /* soft background */
+  padding: 90px 0 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.section-title span {
+    font-size: 18px;
+    color: rgb(255, 78, 10) !important;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Carousel container */
+.testimonials-grid {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Each testimonial (slide) */
+.testimonials-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-item.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Quote icon */
+.testimonials-item i.flaticon-left-quote {
+  font-size: 48px;
+  color: #27ae60;
+  margin-bottom: 20px;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+/* Animate quote icon on active */
+.testimonials-item.active i.flaticon-left-quote {
+  animation: bounce 2s infinite;
+}
+
+/* Bounce animation for quote icon */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Testimonial text */
+.testimonials-item p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* User info list */
+.testimonials-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.testimonials-item ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonials-item ul li img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #27ae60;
+  box-shadow: 0 3px 8px rgba(39, 174, 96, 0.3);
+}
+
+.testimonials-item ul li h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.testimonials-item ul li span {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Navigation dots container */
+.testimonials-dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.testimonials-dots button {
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  transition: background-color 0.3s ease;
+}
+
+.testimonials-dots button.active {
+  background-color: #27ae60;
+  box-shadow: 0 0 8px #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .testimonials-item p {
+    font-size: 16px;
+  }
+
+  .testimonials-item ul li h3 {
+    font-size: 18px;
+  }
+
+  .testimonials-item ul li span {
+    font-size: 14px;
+  }
+}
+/* === Footer Styling === */
+
+.footer {
+  background-color: #105954;
+  color: white;
+  padding: 80px 0 30px;
+  font-family: noto,serif;
+}
+
+.footer .footer_logo_image {
+  margin-bottom: 20px;
+}
+
+.footer .footer_logo {
+  max-width: 90%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer .footer_logo:hover {
+  transform: scale(1.05);
+}
+
+.footer .footer_para {
+    font-size: 18px;
+    line-height: 1.7;
+    color: white;
+}
+
+/* Quick Links Section */
+.ft_head {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ft_head::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #27ae60;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.quick_order {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.quick_list {
+  margin-bottom: 10px;
+}
+
+.quick_links {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.quick_links i {
+  color: white;
+  margin-right: 8px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.quick_links:hover {
+  color: white;
+}
+
+.quick_links:hover i {
+  transform: translateX(5px);
+}
+
+/* Contact Section */
+.address_main {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.address_left {
+  margin-right: 12px;
+}
+
+.ft_icons {
+  font-size: 22px;
+  color: white;
+}
+
+.address_right .ft_address_para {
+  font-size: 15px;
+  color: white;
+  line-height: 1.6;
+}
+
+.ft_address_links {
+  text-decoration: none;
+}
+
+.ft_address_links:hover .ft_address_para {
+  color: white;
+}
+
+/* Copyright */
+.copy_rights_main {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.copy_right_para {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+.copy_link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.copy_link:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .col-md-4 {
+    margin-bottom: 30px;
+  }
+
+  .address_main {
+    justify-content: center;
+  }
+
+  .copy_right_para {
+    font-size: 13px;
+  }
+}
+
+/* Shared Styles */
+.mycall,
+.whatsapp {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  padding-top:17px;
+}
+
+/* Call Button */
+.mycall {
+    background-color: rgb(255, 78, 10) !important;
+    bottom: 100px;
+    right: 20px;
+}
+
+.mycall:hover {
+  background-color: #0056b3;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  background-color: #25D366;
+  bottom: 30px;
+  right: 20px;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
+/* Icon Styles */
+.call-btn,
+.my-whatsapp {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mycall,
+  .whatsapp {
+    width: 48px;
+    height: 48px;
+  }
+
+  .call-btn,
+  .my-whatsapp {
+    font-size: 20px;
+  }
+
+  .mycall {
+    bottom: 90px;
+  }
+
+  .whatsapp {
+    bottom: 25px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+
+
+/* Outer banner background image and layout */
+.inner-banner {
+    background-image: url('image/ft.png'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 65px 0;
+    position: relative;
+    color: #fff;
+}
+
+/* Optional overlay for better text contrast */
+.inner-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
+}
+
+/* Container inside banner */
+.inner-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Breadcrumb style */
+.inner-title ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.inner-title ul li {
+    color: #fff;
+}
+
+.inner-title ul li a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.inner-title ul li a:hover {
+    color: rgb(255, 78, 10) !important; /* Optional hover color */
+}
+
+.inner-title h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
